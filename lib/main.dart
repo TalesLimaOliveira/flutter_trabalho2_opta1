@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(
         primaryColor: AppColors.primary,
-        scaffoldBackgroundColor: AppColors.containerBG,
+        scaffoldBackgroundColor: AppColors.primary,
 
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: AppColors.text),
@@ -50,10 +50,10 @@ class MyApp extends StatelessWidget {
           textColor: AppColors.text,
           titleTextStyle: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 18.0,
+            fontSize: 16.0,
           ),
           subtitleTextStyle: TextStyle(
-            fontSize: 16.0,
+            fontSize: 14.0,
           ),
         ),
 

@@ -56,14 +56,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                       
                 //LOGO
                             Image.asset("assets/flutterlogo.png",
-                              height: 300,
+                              height: 200,
                             ),
                             const Text(
                               AppLabels.appName,
-                              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,
                             ),
-                            const SizedBox(height: 40),
+                            const SizedBox(height: 30),
                 //FORMS
                 //USERNAME - SINGUP 
                             Visibility(

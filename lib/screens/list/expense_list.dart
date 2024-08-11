@@ -27,7 +27,7 @@ class _ExpenseListState extends State<ExpenseList> {
       body: Consumer<ExpenseDao>(
         builder: (context, controller, child) {
           return Container(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(2.0),
             margin: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
               color: AppColors.containerBG,
@@ -47,31 +47,33 @@ class _ExpenseListState extends State<ExpenseList> {
                       return ListTile(
                         title: Text(expenseList.purpose),
                         subtitle: Text(expenseList.toSubtitle()),
-  //LIST ICONS
+  //LIST ICONS                          
                         trailing: Row(
                           mainAxisSize: MainAxisSize.min,
-                            children: [
-    //EDIT FROM LIST
-                              IconButton(
-                                icon: const Icon(Icons.edit),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute( 
-                                      builder: (context) =>
-                                      ExpenseForm(existingExpense: expenseList)
-                                    ),
-                                  );
-                                },
-                              ),
-    //DELETE FROM LIST
-                              IconButton(
-                                icon: const Icon(Icons.delete),
-                                onPressed: () {
-                                  controller.deleteExpense(expenseList.id);
-                                },
-                              ),
-                            ],
+                          children: [
+  //EDIT FROM LIST          
+                            IconButton(
+                              padding: EdgeInsets.zero,
+                              icon: const Icon(Icons.edit),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute( 
+                                    builder: (context) =>
+                                    ExpenseForm(existingExpense: expenseList)
+                                  ),
+                                );
+                              },
+                            ),
+  //DELETE FROM LIST
+                            IconButton(
+                              icon: const Icon(Icons.delete),
+                              padding: EdgeInsets.zero,
+                              onPressed: () {
+                                controller.deleteExpense(expenseList.id);
+                              },
+                            ),
+                          ],
                         ),
                       );
                     },
