@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_trabalho2_opta1/components/colors.dart';
+import 'package:flutter_trabalho2_opta1/commons.dart';
 
 showSnackbar({
   required BuildContext context,

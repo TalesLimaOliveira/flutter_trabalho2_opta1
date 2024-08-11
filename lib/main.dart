@@ -1,15 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'components/labels.dart';
-import 'components/colors.dart';
-import 'controllers/expense_controller.dart';
-import 'screens/home.dart';
+import 'package:flutter_trabalho2_opta1/commons.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ExpenseController()),
+        ChangeNotifierProvider(create: (_) => ExpenseDao()),
       ],
       child: const MyApp(),
     ),

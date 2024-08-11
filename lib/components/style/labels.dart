@@ -8,7 +8,7 @@ class AppLabels {
   static const String addExpense = 'Adicionar';
   static const String updateExpense = 'Atualizar';
 
-  static const String purpose = 'Proposito';
+  static const String purpose = 'Finalidade';
   static const String type = 'Tipo';
   static const String amount = 'Valor';
   static const String month = 'Mês';
@@ -43,8 +43,10 @@ class AppLabels {
   ];
 
   static const List<String> typesList = [
-    'Ermegencial',
-    'Dispensa',
     'Fixo',
+    'Variável',
+    'Eventual',
+    'Ermegencial',
+    'Outro',
   ];
 }

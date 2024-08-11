@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_trabalho2_opta1/components/colors.dart';
-import 'package:flutter_trabalho2_opta1/components/labels.dart';
-import 'package:flutter_trabalho2_opta1/screens/expense_form.dart';
-import 'package:flutter_trabalho2_opta1/controllers/expense_controller.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_trabalho2_opta1/commons.dart';
+
 
 class ExpenseList extends StatefulWidget {
   const ExpenseList({super.key});
@@ -28,7 +24,7 @@ class _ExpenseListState extends State<ExpenseList> {
       ),
 
 //SCREEN STYLE
-      body: Consumer<ExpenseController>(
+      body: Consumer<ExpenseDao>(
         builder: (context, controller, child) {
           return Container(
             padding: const EdgeInsets.all(16.0),
@@ -94,8 +90,7 @@ class _ExpenseListState extends State<ExpenseList> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>
-              const ExpenseForm()
+              builder: (context) => const ExpenseForm()
             ),
           );
         },

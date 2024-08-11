@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_trabalho2_opta1/commons.dart';
 
 class AppColors {
   static const Color primary = Color.fromARGB(255, 255, 64, 129);
