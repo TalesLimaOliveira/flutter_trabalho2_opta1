@@ -9,6 +9,16 @@ class ExpenseList extends StatefulWidget {
 }
 
 class _ExpenseListState extends State<ExpenseList> {
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Provider.of<ExpenseDao>(context, listen: false).loadExpenses(context);
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +74,7 @@ class _ExpenseListState extends State<ExpenseList> {
                               icon: const Icon(Icons.delete),
                               padding: EdgeInsets.zero,
                               onPressed: () {
-                                controller.deleteExpense(expenseList.id);
+                                controller.deleteExpense(context, expenseList.id);
                               },
                             ),
                           ],

@@ -11,6 +11,12 @@ class AppLabels {
   static const String errorSaving = 'Erro ao salvar gasto';
   static const String errorUpdating = 'Erro ao atualizar gasto';
 
+  static const String successLoading = 'Lista carregada com sucesso';
+  static const String successSaving = 'Gasto salvo com sucesso';
+  static const String successAdding = 'Gasto adicionado com sucesso';
+  static const String successUpdating = 'Gasto autalizado com sucesso';
+  static const String successDeleting = 'Gasto removido com sucesso';
+
   static const String purpose = 'Finalidade';
   static const String type = 'Tipo';
   static const String amount = 'Valor';
