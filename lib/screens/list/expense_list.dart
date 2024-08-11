@@ -15,12 +15,6 @@ class _ExpenseListState extends State<ExpenseList> {
       appBar: AppBar(
         title: const Text(AppLabels.appBarList),
         automaticallyImplyLeading: false,
-        actions: [IconButton(
-          icon: const Icon(Icons.logout),
-          onPressed: (){
-            Navigator.pop(context);
-          },
-        )],
       ),
 
 //SCREEN STYLE

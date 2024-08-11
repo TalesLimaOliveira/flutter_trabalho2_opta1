@@ -13,14 +13,6 @@ showSnackbar({
     ),
     duration: const Duration(seconds: 4),
     showCloseIcon: true,
-    
-    // action: SnackBarAction(
-    //   label: 'Ok',
-    //   textColor: AppColors.textButton,
-    //   onPressed: () {
-    //     ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    //   },
-    //  ),
   );
 
   ScaffoldMessenger.of(context).showSnackBar(snackBar);

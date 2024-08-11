@@ -10,7 +10,6 @@ export 'components/style/textfields.dart';
 export 'components/widgets/snackbar.dart';
 
 //screen
-export 'screens/home/home.dart';
 export 'screens/form/expense_form.dart';
 export 'screens/list/expense_list.dart';
 

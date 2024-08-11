@@ -24,7 +24,7 @@ class ExpenseDao extends ChangeNotifier {
         notifyListeners();
       }
     } catch (e) {
-      print('Error loading expenses: $e');
+      showSnackbar(context: context, label: AppLabels.errorLoading);
     }
   }
 
@@ -34,7 +34,7 @@ class ExpenseDao extends ChangeNotifier {
       final String jsonString = jsonEncode(_expenseList.map((e) => e.toJson()).toList());
       await preference.setString(jsonKeyPreference , jsonString);
     } catch (e) {
-      print('Error saving expenses: $e');
+      showSnackbar(context: context, label: AppLabels.errorSaving);
     }
   }
 
@@ -57,10 +57,10 @@ void updateExpense(int id, ExpenseModel newExpense) async {
       await saveExpenses();
       notifyListeners();
     } else {
-      print('Expense with id $id not found');
+      showSnackbar(context: context, label: AppLabels.errorUpdating);
     }
   } catch (e) {
-    print('Error saving expenses: $e');
+    showSnackbar(context: context, label: AppLabels.errorSaving);
   }
 }
 
@@ -84,4 +84,5 @@ void updateExpense(int id, ExpenseModel newExpense) async {
     final expenseDao = Provider.of<ExpenseDao>(context, listen: false);
     expenseDao.deleteExpense(id);
   }
+
 }
